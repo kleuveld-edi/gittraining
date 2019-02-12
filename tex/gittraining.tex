@@ -128,76 +128,94 @@ EDI \\ % Your institution for the title page
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Why Git?}
-\begin{itemize}
-\item It handles conflicts really nicely.
-\item It allows you to revert any change (any commit, in git-speak)
-\item It allows you to download any old version of any file. (Though for this you will need to use to the command line.)
-\end{itemize}
+	\frametitle{Why Git?}
+	\begin{itemize}
+		\item It handles conflicts really nicely (in plain text files, like CSV, .do and .ado).
+		\item It allows you to revert any change (any commit, in git-speak)
+		\item It allows you to download any old version of any file. (Though for this you will need to use to the command line.)
+	\end{itemize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Setting up Git}
-\begin{itemize}
-\item Download and install GitHub Desktop: https://desktop.github.com/
-\item Optional, but recommended: Download Git: https://git-scm.com/downloads 
-\item Add the training repository to your GitHub Desktop: https://github.com/kleuveld-edi/gittraining.git
-\end{itemize}
+	\begin{itemize}
+		\item Download and install GitHub Desktop: https://desktop.github.com/
+		\item Optional, but recommended: Download Git: https://git-scm.com/downloads 
+		\item Add the training repository to your GitHub Desktop: https://github.com/kleuveld-edi/gittraining.git
+	\end{itemize}
 \end{frame}
 
 \section{Using Git} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-\begin{frame}
 
-\frametitle{Git workflow}
-\only<1>{The general workflow to get your changes onto the git server is:}
-\only<2>{Expanding on this:}
-\only<3,4>{So forget about staging!}
-\only<5>{All things together:}
-\begin{enumerate}
-  \item<1-> Change or add File
-  \only<1-2>{\item \textbf{Stage} changed file}
-  \only<3->{\item \textcolor{gray}{\textbf{Stage} changed file}}
-  \only<2>{\begin{itemize}
-  	\item This tells Git that you've changed the file. 
-  	\item GitHub Desktop does this automatically!
-  \end{itemize}}
-  \item<1-> \textbf{Commit} change
-   \only<3,5>{\begin{itemize}
-  	\item This adds the changes you've staged to your \textbf{local} repository.
-  	\item Git now saves a snapshot of the state of your project.
-  	\item This means you can undo all the changes you've made since the last commit.
-  \end{itemize}}
-  \item<1-> \textbf{Push} Change
-   \only<4,5>{\begin{itemize}
-  	\item Commits will be uploaded to the remote repository (the github server for now).
-	\item Others can now \textbf{fetch} your changes
-  \end{itemize}}
-\end{enumerate}
+\begin{frame}
+	\frametitle{Git workflow}
+	\only<1>{The general workflow to get your changes onto the git server is:}
+	\only<2>{Expanding on this:}
+	\only<3,4>{So forget about staging!}
+	\only<5>{All things together:}
+	\begin{enumerate}
+  		\item<1-> Change or add File
+  		\only<1-2>{\item \textbf{Stage} changed file} \only<3->{\item \textcolor{gray}{\textbf{Stage} changed file}}
+  		\only<2>{
+  			\begin{itemize}
+	  			\item This tells Git that you've changed the file. 
+	  			\item GitHub Desktop does this automatically!
+  			\end{itemize}
+  		}
+	  	\item<1-> \textbf{Commit} change
+		\only<3,5>{
+			\begin{itemize}
+				\item This adds the changes you've staged to your \textbf{local} repository.
+				\item Git now saves a snapshot of the state of your project.
+				\item This means you can undo all the changes you've made since the last commit.
+			\end{itemize}
+		}
+	  	\item<1-> \textbf{Push} Change
+	   	\only<4,5>{
+	   		\begin{itemize}
+	  			\item Commits will be uploaded to the remote repository (the github server for now).
+				\item Others can now \textbf{fetch} your changes
+	  		\end{itemize}
+	  	}
+	\end{enumerate}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Now you!}
-\begin{enumerate}
-  \item Add a file to the folder where you've put your repository. For example: Koen.txt
-  \item Commit the change (press "Commit to Master" in bottom left). GitHub Desktop may prefill a summary for you. 
-  		These are always in present tense, as it describes what is done when the commit is applied.
-  \item Push the change to the central repository (press "Push origin" in the top menu).
-  \item The "Push Origin" button may change to "Fetch changes" as the commits of other people are applied. 
-  		Press the button again to download them
-\end{enumerate}
+	\frametitle{Now you!}
+	\begin{enumerate}
+		\item Add a file to the folder where you've put your repository. For example: Koen.txt
+		\item Commit the change (press "Commit to Master" in bottom left). GitHub Desktop may prefill a summary for you. 
+		  		These are always in present tense, as it describes what is done when the commit is applied.
+		\item Push the change to the central repository (press "Push origin" in the top menu).
+		\item The "Push Origin" button may change to "Fetch changes" as the commits of other people are applied. 
+		  		Press the button again to download them
+	\end{enumerate}
 \end{frame}
 
 \begin{frame}
-\frametitle{Notes:}
-\begin{enumerate}
-	\item It all works fairly similar to Dropbox, but you have to do things manually. This may or may not be a good thing.
-	\item You can do all we've done from the command line, but it'd be more trouble than it's worth.
-	\item In the "History" tab of GitHub Desktop you can see all the commits. You can right-click any commit to revert it. 
-	\item Reverting creates a new commit, which you can then revert as well!
-\end{enumerate}
+	\frametitle{Notes:}
+	\begin{enumerate}
+		\item It all works fairly similar to Dropbox, but you have to do things manually. This may or may not be a good thing.
+		\item You can do all we've done from the command line, but it'd be more trouble than it's worth.
+		\item In the "History" tab of GitHub Desktop you can see all the commits. You can right-click any commit to revert it. 
+		\item Reverting creates a new commit, which you can then revert as well!
+	\end{enumerate}
 \end{frame}
+
+
+\begin{frame}
+	\frametitle{Resolving Conflicts}
+	...
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Branches}
+	...
+\end{frame}
+
 % %------------------------------------------------
 
 % \begin{frame}
