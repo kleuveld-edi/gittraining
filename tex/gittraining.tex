@@ -36,11 +36,11 @@
 %\usetheme{Dresden}
 %\usetheme{Frankfurt}
 %\usetheme{Goettingen}
-%\usetheme{Hannover}
+\usetheme{Hannover}
 %\usetheme{Ilmenau}
 %\usetheme{JuanLesPins}
 %\usetheme{Luebeck}
-\usetheme{Madrid}
+%\usetheme{Madrid}
 %\usetheme{Malmoe}
 %\usetheme{Marburg}
 %\usetheme{Montpellier}
@@ -66,7 +66,7 @@
 %\usecolortheme{orchid}
 %\usecolortheme{rose}
 %\usecolortheme{seagull}
-%\usecolortheme{seahorse}
+\usecolortheme{seahorse}
 %\usecolortheme{whale}
 %\usecolortheme{wolverine}
 
@@ -147,7 +147,7 @@ EDI \\ % Your institution for the title page
 \end{frame}
 
 \section{Using Git} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-
+\subsection{Basic Use}
 \begin{frame}
 	\frametitle{Git workflow}
 	\only<1>{The general workflow to get your changes onto the git server is:}
@@ -171,7 +171,7 @@ EDI \\ % Your institution for the title page
 				\item This means you can undo all the changes you've made since the last commit.
 			\end{itemize}
 		}
-	  	\item<1-> \textbf{Push} Change
+	  	\item<1-> \textbf{Push} Commit(s)
 	   	\only<4,5>{
 	   		\begin{itemize}
 	  			\item Commits will be uploaded to the remote repository (the github server for now).
@@ -204,12 +204,17 @@ EDI \\ % Your institution for the title page
 	\end{enumerate}
 \end{frame}
 
-
+\subsection{Advanced Use}
 \begin{frame}
 	\frametitle{Resolving Conflicts}
 	...
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{Viewing the History of a file}
+	Use the github website. Note how much information there is to process, not quite user-friendly!
+\end{frame}
 
 \begin{frame}
 	\frametitle{Branches}
