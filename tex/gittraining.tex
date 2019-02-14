@@ -267,6 +267,7 @@ EDI \\ % Your institution for the title page
 %------------------------------------------------
 \subsection{Dealing with other people}
 %------------------------------------------------
+
 \begin{frame}
 	\frametitle{Resolving Conflicts}
 	Editing one file without conflicts:
@@ -275,7 +276,7 @@ EDI \\ % Your institution for the title page
 		\item<2-> Then we'll have to sync it all by pulling and then pushing;
 		\item<2-> At the end of all this, we'll have one file that everyone edited, simultaneously.
 	\end{enumerate}
-	Now, let's try to create conflicts:
+	A conflict does occur if you try to pull a commit that edits a line that you've already commited changes to in your own local repo. Let's try to create conflicts:
 	\begin{enumerate}
 		\item<3-> Now, two people your name to the line saying "Add your name here:", commit, and sync changes.
 		\item<3-> One person must now resolve the conflict. Open the file with the conflict, and make the edits necessary:
@@ -284,13 +285,13 @@ EDI \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-This is how git tags a conflict within the file:
-\hfill\includegraphics[width=1\linewidth]{figures/conflict.png}\hfill\strut
-Notes:
-\begin{enumerate}
-	\item HEAD is us. To be precise, it's the most recent version of files that we have.
-	\item The long string of letters and numbers is the SHA of the commit that is conflicting with our work. Each commit has a unique SHA.
-\end{enumerate}
+	This is how git tags a conflict within the file:
+	\hfill\includegraphics[width=1\linewidth]{figures/conflict.png}\hfill\strut
+	Notes:
+	\begin{enumerate}
+		\item HEAD is us. To be precise, it's the most recent version of files that we have.
+		\item The long string of letters and numbers is the SHA of the commit that is conflicting with our work. Each commit has a unique SHA.
+	\end{enumerate}
 \end{frame}
 
 
@@ -300,16 +301,32 @@ Notes:
 		\item \textbf{Branches} allow you to have your multiple versions of all the files in the repo, at the same time;
 		\item You can edit things in your branch, while leaving the main branch (\textbf{MASTER}) untouched.
 		\item Of course, this means that you are also not bothered by other people's changes!
-		\item Once you're happy with the changes you've made and feel they're ready to be shared, you can \textbf{merge} your branch back into master
+		\item Once you're happy with the changes you've made and feel they're ready to be shared, you can \textbf{merge} your branch back into master.
+		\item Merging works like pulling all changes in one go: meaning you'll have to resolve conflicts.
 	\end{itemize}
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{Branches}
+	Now:
+	\begin{itemize}
+		\item Create a branch.
+		\item Make items to whatever you want
+		\item Commit these changes to your own branch.
+		\item Keep your branch synced with the remote as you wish.
+		\item At the end, merge your branch back into the MASTER branch.
+\end{frame}
+
+%------------------------------------------------
 \section{Final thoughts}
+%------------------------------------------------
+
 \begin{frame}
 	\frametitle{Final thoughts}
 	\begin{itemize}
-		\item Your collobarators (DPs) technically don't need to use git for it to be useful. Just make a branch where you keep their changes, and a branch where 
-				you keep yours and merge this from time to time, and share the results back to the collaborator.
+		\item Today was complicated because we were all editing a bunch of files. Normally, you'd only edit a few files with a few people.
+		\item Your collobarators (DPs) technically don't need to use git for it to be useful. Just make a branch where you keep their changes, and a branch where you keep yours and merge this from time to time, and share the results back to the collaborator.
 		\item Explore the github website to find all versions of all files. Note how much information there is to process, not quite user-friendly!
 	\end{itemize}
 \end{frame}
