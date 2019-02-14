@@ -140,30 +140,18 @@ EDI \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Check that you've done the following}
 	\begin{itemize}
-		\item Download and install GitHub Desktop: https://desktop.github.com/
-		\item Optional, but recommended: Download Git: https://git-scm.com/downloads 
+		\item Download and install GitHub Desktop: \url{https://desktop.github.com/}
+		\item Optional, but recommended Download Git: \url{https://git-scm.com/downloads} 
 		\item Make an account on GitHub.com, and share it with Koen, so he can invite you to the training.
 	\end{itemize}
 \end{frame}
 
-\section{Introduction to GitHub Desktop}
-% \begin{frame}
-% \frametitle{Overview}
-% 	\begin{itemize}
-% 		\item Your Git files are held in a repository. There's two types of copies of this repository:
-% 		\begin{itemize}
-% 			\item The remote repository, or origin. This is a server somewhere. In our case today, it's GitHub. The
-% 			EDI adofiles and Surveybe code are hosted on Codebase.
-% 			\item Your local repository, which is in the folder you choose.
-% 		\end{itemize}
-% 		\item GitHub Desktop will handle the syncing between the remote and local repos, but you will need to manually tell it when.
-% 		\item You can choose any folder to put your local repo in. It's best not to use a shared 
-% 				Dropbox folder, as updates made by other Dropbox users will confuse Git.	
-% 	\end{itemize}
-% \end{frame}
+\section{Working with GitHub Desktop}
+
+\subsection{Downloading files}
 
 \begin{frame}
-\frametitle{Overview}
+\frametitle{Downloading the repo}
 	\begin{itemize}
 			\item Clone (i.e make a local copy of) the following repository: https://github.com/kleuveld-edi/gittraining
 	\end{itemize}
@@ -177,9 +165,17 @@ EDI \\ % Your institution for the title page
 	\end{itemize}
 \end{frame}
 
-\section{Using Git} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\begin{frame}
+	\frametitle{Git workflow; getting other people's edits}
+	The workflow to get other people's changes is straightforward:
+	\begin{enumerate}
+		\item<2-> Fetch changes: this tells git to checks what's up on the server.
+		\item<2-> Pull changes: if there are changes, this tells git to download them
+	\end{enumerate}
+	\only<3>{I will now create a file called example.do which we will all edit later on. Take the above steps to download it.}
+\end{frame}
 
-\subsection{Basic Use}
+\subsection{Syncing your own changes}
 \begin{frame}
 	\frametitle{Git workflow: making edits}
 	\only<1>{The general workflow to get your changes onto the git server is:}
@@ -207,7 +203,8 @@ EDI \\ % Your institution for the title page
 	   	\only<4,5>{
 	   		\begin{itemize}
 	  			\item Commits will be uploaded to the remote repository (the github server for now).
-				\item Others can now \textbf{fetch} your changes
+				\item Others can now \textbf{Pull} your changes
+				\item Your repo must be up-to-date if you're going to Push (else you may push outdated things!), so you may have to pull first (git will tell you)
 	  		\end{itemize}
 	  	}
 	\end{enumerate}
@@ -221,9 +218,9 @@ EDI \\ % Your institution for the title page
 		\item Add a file to the folder where you've put your repository. For example: Koen.txt
 		\item Commit the change (press "Commit to Master" in bottom left). GitHub Desktop may prefill a summary for you. 
 		  		These are always in present tense, as it describes what is done when the commit is applied.
-		\item Push the change to the central repository: Repository > Push
+		\item Push the change to the central repository: Repository - Push
 		\item If you try to push at the same time, you may get an error, just try again later. 
-		\item If the repo has been changed before you try to push, you need to pull first:  Repository > Pull 
+		\item If the repo has been changed before you try to push, you need to pull first:  Repository - Pull 
 	\end{enumerate}
 \end{frame}
 
@@ -238,15 +235,8 @@ EDI \\ % Your institution for the title page
 	\end{enumerate}
 \end{frame}
 
+\subsection{Dealing with other people}
 
-\begin{frame}
-	\frametitle{Git workflow; getting other people's edits}
-	\begin{enumerate}
-		\item Fetch changes: this tells git to checks what's up on the server.
-		\item Pull changes: if there are changes, this tells git to download them
-	\end{enumerate}
-	I will now create a file called example.do which we will all edit. Take the above steps to download it.
-\end{frame}
 
 \subsection{Advanced Use}
 \begin{frame}
@@ -274,15 +264,28 @@ Notes:
 \end{enumerate}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Viewing the History of a file}
-	Use the github website. Note how much information there is to process, not quite user-friendly!
-\end{frame}
 
 \begin{frame}
 	\frametitle{Branches}
-	...
+	\begin{itemize}
+		\item \textbf{Branches} allow you to have your multiple versions of all the files in the repo, at the same time;
+		\item You can edit things in your branch, while leaving the main branch (\textbf{MASTER}) untouched.
+		\item Of course, this means that you are also not bothered by other people's changes!
+		\item Once you're happy with the changes you've made and feel they're ready to be shared, you can \textbf{merge} your branch back into master
+	\end{itemize}
 \end{frame}
+
+\section{Final thoughts}
+\begin{frame}
+	\frametitle{Final thoughts}
+	\begin{itemize}
+		\item Your collobarators (DPs) technically don't need to use git for it to be useful. Just make a branch where you keep their changes, and a branch where 
+				you keep yours and merge this from time to time, and share the results back to the collaborator.
+		\item Explore the github website to find all versions of all files. Note how much information there is to process, not quite user-friendly!
+	\end{itemize}
+\end{frame}
+
+
 
 % %------------------------------------------------
 
