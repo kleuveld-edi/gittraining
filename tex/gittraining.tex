@@ -178,10 +178,10 @@ EDI \\ % Your institution for the title page
 \end{frame}
 
 \section{Using Git} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-\sectiontitle
+
 \subsection{Basic Use}
 \begin{frame}
-	\frametitle{Git workflow}
+	\frametitle{Git workflow: making edits}
 	\only<1>{The general workflow to get your changes onto the git server is:}
 	\only<2>{Expanding on this:}
 	\only<3,4>{So forget about staging!}
@@ -216,13 +216,14 @@ EDI \\ % Your institution for the title page
 
 \begin{frame}
 	\frametitle{Now you!}
+	One by one:
 	\begin{enumerate}
 		\item Add a file to the folder where you've put your repository. For example: Koen.txt
 		\item Commit the change (press "Commit to Master" in bottom left). GitHub Desktop may prefill a summary for you. 
 		  		These are always in present tense, as it describes what is done when the commit is applied.
-		\item Push the change to the central repository (press "Push origin" in the top menu).
-		\item The "Push Origin" button may change to "Fetch changes" as the commits of other people are applied. 
-		  		Press the button again to download them
+		\item Push the change to the central repository: Repository > Push
+		\item If you try to push at the same time, you may get an error, just try again later. 
+		\item If the repo has been changed before you try to push, you need to pull first:  Repository > Pull 
 	\end{enumerate}
 \end{frame}
 
@@ -230,18 +231,48 @@ EDI \\ % Your institution for the title page
 	\frametitle{Notes:}
 	\begin{enumerate}
 		\item It all works fairly similar to Dropbox, but you have to do things manually. This may or may not be a good thing.
+		\item To prevent the conflicts when syncing at the same time, you can make sure to work in your own branch (more on that later).
 		\item You can do all we've done from the command line, but it'd be more trouble than it's worth.
 		\item In the "History" tab of GitHub Desktop you can see all the commits. You can right-click any commit to revert it. 
 		\item Reverting creates a new commit, which you can then revert as well!
 	\end{enumerate}
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{Git workflow; getting other people's edits}
+	\begin{enumerate}
+		\item Fetch changes: this tells git to checks what's up on the server.
+		\item Pull changes: if there are changes, this tells git to download them
+	\end{enumerate}
+	I will now create a file called example.do which we will all edit. Take the above steps to download it.
+\end{frame}
+
 \subsection{Advanced Use}
 \begin{frame}
 	\frametitle{Resolving Conflicts}
-	...
+	Editing one file without conflicts:
+	\begin{enumerate}
+		\item<2-> In the file example.do, everyone add something to their own line, and commit your changes.
+		\item<2-> Then we'll have to sync it all by pulling and then pushing.
+		\item<2-> At the end of all this, we'll have one file that everyone edited, simultaneously
+	\end{enumerate}
+	Now, let's try to create conflicts:
+	\begin{enumerate}
+		\item<3-> Now, two people your name to the line saying "Add your name here:", commit, and sync changes.
+		\item<3-> One person must now resolve the conflict. Open the file with the conflict, and make the edits necessary:
+	\end{enumerate}
+	
 \end{frame}
 
+\begin{frame}
+\only<4>{\hfill\includegraphics[width=1\linewidth]{figures/conflict.png}\hfill\strut}
+Notes:
+\begin{enumerate}
+	\item HEAD is us. To be precise, it's the most recent version of files that we have.
+	\item The long string of letters and numbers is the SHA of the commit that is conflicting with our work. Each commit has a unique SHA.
+\end{enumerate}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Viewing the History of a file}
