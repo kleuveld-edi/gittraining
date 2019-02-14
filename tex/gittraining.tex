@@ -117,12 +117,12 @@ EDI \\ % Your institution for the title page
 
 \begin{frame}
 \frametitle{What is git?}
-\begin{itemize}
-\item Git is a Version Control System
-\item It was developed by the creator of Linux to keep track of the work of all the people helping out on developing Linux.
-\item It allows you to download the project you’re working on from a central server, make all the edits you want, and upload those back to the server.
-\item It works as a set of arcane commands you type from the command line. But there are programs that make it easier, like GitHub Desktop.
-\end{itemize}
+	\begin{itemize}
+		\item Git is a Version Control System
+		\item It was developed by the creator of Linux to keep track of the work of all the people helping out on developing Linux.
+		\item It allows you to download the project you’re working on from a central server, make all the edits you want, and upload those back to the server.
+		\item It works as a set of arcane commands you type from the command line. But there are programs that make it easier, like GitHub Desktop.
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
@@ -146,14 +146,39 @@ EDI \\ % Your institution for the title page
 	\end{itemize}
 \end{frame}
 
+%------------------------------------------------
+%------------------------------------------------
 \section{Working with GitHub Desktop}
+%------------------------------------------------
+%------------------------------------------------
 
+%------------------------------------------------
+\subsection{Overview}
+%------------------------------------------------
+\section{Introduction to GitHub Desktop}
+\begin{frame}
+\frametitle{Overview}
+	\begin{itemize}
+		\item Your Git files are held in a repository (repo). There's two types of copies of this repository:
+		\begin{itemize}
+			\item The remote repository, or origin. This is a server somewhere. In our case today, it's GitHub. The
+			EDI adofiles and Surveybe code are hosted on Codebase.
+			\item Your (or your collaborator's) local repository, which is in the folder you choose.
+		\end{itemize}
+		\item GitHub Desktop will handle the syncing between the remote and local repos, but you will need to manually tell it when.
+		\item You can choose any folder to put your local repo in. It's best not to use a shared 
+				Dropbox folder, as updates made by other Dropbox users will confuse Git.	
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
 \subsection{Downloading files}
+%------------------------------------------------
 
 \begin{frame}
 \frametitle{Downloading the repo}
 	\begin{itemize}
-			\item Clone (i.e make a local copy of) the following repository: https://github.com/kleuveld-edi/gittraining
+			\item Clone (i.e make a local copy of) the following repository: \url{https://github.com/kleuveld-edi/gittraining}
 	\end{itemize}
 	\hfill\includegraphics[width=0.5\linewidth]{figures/clonerepo.png}\hfill\strut
 	\begin{itemize}
@@ -161,7 +186,7 @@ EDI \\ % Your institution for the title page
 	\end{itemize}
 	\hfill\includegraphics[width=0.5\linewidth]{figures/fetch.png}\hfill\strut
 	\begin{itemize}
-			\item That's it!
+			\item You're ready to go!
 	\end{itemize}
 \end{frame}
 
@@ -169,13 +194,17 @@ EDI \\ % Your institution for the title page
 	\frametitle{Git workflow; getting other people's edits}
 	The workflow to get other people's changes is straightforward:
 	\begin{enumerate}
-		\item<2-> Fetch changes: this tells git to checks what's up on the server.
+		\item<2-> Fetch changes: this tells git to check if there's any changes on the server.
 		\item<2-> Pull changes: if there are changes, this tells git to download them
 	\end{enumerate}
 	\only<3>{I will now create a file called example.do which we will all edit later on. Take the above steps to download it.}
 \end{frame}
 
+%------------------------------------------------
 \subsection{Syncing your own changes}
+%------------------------------------------------
+
+
 \begin{frame}
 	\frametitle{Git workflow: making edits}
 	\only<1>{The general workflow to get your changes onto the git server is:}
@@ -217,7 +246,7 @@ EDI \\ % Your institution for the title page
 	\begin{enumerate}
 		\item Add a file to the folder where you've put your repository. For example: Koen.txt
 		\item Commit the change (press "Commit to Master" in bottom left). GitHub Desktop may prefill a summary for you. 
-		  		These are always in present tense, as it describes what is done when the commit is applied.
+		  	These are always in present tense, as it describes what is done when the commit is applied.
 		\item Push the change to the central repository: Repository - Push
 		\item If you try to push at the same time, you may get an error, just try again later. 
 		\item If the repo has been changed before you try to push, you need to pull first:  Repository - Pull 
@@ -228,24 +257,23 @@ EDI \\ % Your institution for the title page
 	\frametitle{Notes:}
 	\begin{enumerate}
 		\item It all works fairly similar to Dropbox, but you have to do things manually. This may or may not be a good thing.
-		\item To prevent the conflicts when syncing at the same time, you can make sure to work in your own branch (more on that later).
+		\item To prevent having to pull other people's work everytime you want to push, you can make sure to work in your own branch (more on that later).
 		\item You can do all we've done from the command line, but it'd be more trouble than it's worth.
 		\item In the "History" tab of GitHub Desktop you can see all the commits. You can right-click any commit to revert it. 
 		\item Reverting creates a new commit, which you can then revert as well!
 	\end{enumerate}
 \end{frame}
 
+%------------------------------------------------
 \subsection{Dealing with other people}
-
-
-\subsection{Advanced Use}
+%------------------------------------------------
 \begin{frame}
 	\frametitle{Resolving Conflicts}
 	Editing one file without conflicts:
 	\begin{enumerate}
-		\item<2-> In the file example.do, everyone add something to their own line, and commit your changes.
-		\item<2-> Then we'll have to sync it all by pulling and then pushing.
-		\item<2-> At the end of all this, we'll have one file that everyone edited, simultaneously
+		\item<2-> In the file example.do, everyone add something to their own line, and commit your changes;
+		\item<2-> Then we'll have to sync it all by pulling and then pushing;
+		\item<2-> At the end of all this, we'll have one file that everyone edited, simultaneously.
 	\end{enumerate}
 	Now, let's try to create conflicts:
 	\begin{enumerate}
@@ -256,7 +284,8 @@ EDI \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-\only<4>{\hfill\includegraphics[width=1\linewidth]{figures/conflict.png}\hfill\strut}
+This is how git tags a conflict within the file:
+\hfill\includegraphics[width=1\linewidth]{figures/conflict.png}\hfill\strut
 Notes:
 \begin{enumerate}
 	\item HEAD is us. To be precise, it's the most recent version of files that we have.
