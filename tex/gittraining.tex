@@ -133,6 +133,7 @@ EDI \\ % Your institution for the title page
 		\item It handles conflicts really nicely (in plain text files, like CSV, .do and .ado).
 		\item It allows you to revert any change (any commit, in git-speak)
 		\item It allows you to download any old version of any file. (Though for this you will need to use to the command line.)
+		\item It allows you to have multiple versions of the same files, so everyone can work on their own version. These versions (branches) can then be merged together.
 	\end{itemize}
 \end{frame}
 
@@ -159,13 +160,12 @@ EDI \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Overview}
 	\begin{itemize}
-		\item Your Git files are held in a repository (repo). There's two types of copies of this repository:
+		\item Your Git files are held in a \textbf{repository} (repo). There's two types of copies of this repository:
 		\begin{itemize}
-			\item The remote repository, or origin. This is a server somewhere. In our case today, it's GitHub. The
-			EDI adofiles and Surveybe code are hosted on Codebase.
-			\item Your (or your collaborator's) local repository, which is in the folder you choose.
+			\item The \textbf{remote} repository, or \textbf{origin}. This is a server somewhere. In our case today, it's GitHub. EDI adofiles and Surveybe code are hosted on Codebase.
+			\item Your (or your collaborator's) \textbf{local} repository, which is in a folder you choose.
 		\end{itemize}
-		\item GitHub Desktop will handle the syncing between the remote and local repos, but you will need to manually tell it when.
+		\item GitHub Desktop will handle the syncing between the remote and local repos, but you will need to manually tell it when. GitHub Desltop also works for git repositories not hosted on GitHub itself.
 		\item You can choose any folder to put your local repo in. It's best not to use a shared 
 				Dropbox folder, as updates made by other Dropbox users will confuse Git.	
 	\end{itemize}
@@ -316,6 +316,7 @@ EDI \\ % Your institution for the title page
 		\item Commit these changes to your own branch.
 		\item Keep your branch synced with the remote as you wish.
 		\item At the end, merge your branch back into the MASTER branch.
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
