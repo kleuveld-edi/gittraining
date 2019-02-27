@@ -118,9 +118,9 @@ EDI \\ % Your institution for the title page
 \begin{frame}
 \frametitle{What is git?}
 	\begin{itemize}
-		\item Git is a Version Control System
-		\item It was developed by the creator of Linux to keep track of the work of all the people helping out on developing Linux.
-		\item It allows you to download the project you’re working on from a central server, make all the edits you want, and upload those back to the server.
+		\item Git is a Version Control System;
+		\item It was developed by the creator of Linux to keep track of the work of all the people helping out on developing Linux;
+		\item It allows you to download the project you’re working on from a central server, make all the edits you want offline, and upload those back to the server;
 		\item It works as a set of arcane commands you type from the command line. But there are programs that make it easier, like GitHub Desktop.
 	\end{itemize}
 \end{frame}
@@ -130,10 +130,11 @@ EDI \\ % Your institution for the title page
 \begin{frame}
 	\frametitle{Why Git?}
 	\begin{itemize}
-		\item It handles conflicts really nicely (in plain text files, like CSV, .do and .ado).
-		\item It allows you to revert any change (any commit, in git-speak)
-		\item It allows you to download any old version of any file. (Though for this you will need to use to the command line.)
-		\item It allows you to have multiple versions of the same files, so everyone can work on their own version. These versions (branches) can then be merged together.
+		\item It handles conflicts really nicely (in plain text files, like CSV, .do and .ado);
+		\item It allows you to revert any change (any commit, in git-speak);
+		\item See who's responsible for each edit to a file;
+		\item It allows you to download any old version of any file. (Though the website or the command line);
+		\item It allows you to have multiple versions of the same files, so everyone can work on their own version: these versions (branches) can then be merged together.
 	\end{itemize}
 \end{frame}
 
@@ -142,8 +143,8 @@ EDI \\ % Your institution for the title page
 \frametitle{Check that you've done the following}
 	\begin{itemize}
 		\item Download and install GitHub Desktop: \url{https://desktop.github.com/}
-		\item Optional, but recommended Download Git: \url{https://git-scm.com/downloads} 
-		\item Make an account on GitHub.com, and share it with Koen, so he can invite you to the training.
+		\item Optional, if you'd like to give the command line a go, download Git: \url{https://git-scm.com/downloads} 
+		\item Make an account on GitHub.com, and share it with Koen, so he can invite you to the training repository.
 	\end{itemize}
 \end{frame}
 
@@ -161,10 +162,10 @@ EDI \\ % Your institution for the title page
 	\begin{itemize}
 		\item Your Git files are held in a \textbf{repository} (repo). There's two types of copies of this repository:
 		\begin{itemize}
-			\item The \textbf{remote} repository, or \textbf{origin}. This is a server somewhere. In our case today, it's GitHub. EDI adofiles and Surveybe code are hosted on Codebase.
-			\item Your (or your collaborator's) \textbf{local} repository, which is in a folder you choose.
+			\item The \textbf{remote} repository, or \textbf{origin}: this is a server somewhere. In our case today, it's GitHub. EDI adofiles and Surveybe code are hosted on Codebase.
+			\item Your (or your collaborator's) \textbf{local} repository: this is on your computer, and you make edits here.
 		\end{itemize}
-		\item GitHub Desktop will handle the syncing between the remote and local repos, but you will need to manually tell it when. GitHub Desltop also works for git repositories not hosted on GitHub itself.
+		\item GitHub Desktop will handle the syncing between the remote and local repos, but you will need to manually tell it when. GitHub Desktop also works for git repositories not hosted on GitHub itself.
 		\item You can choose any folder to put your local repo in. It's best not to use a shared 
 				Dropbox folder, as updates made by other Dropbox users will confuse Git.	
 	\end{itemize}
@@ -193,10 +194,10 @@ EDI \\ % Your institution for the title page
 	\frametitle{Git workflow; getting other people's edits}
 	The workflow to get other people's changes is straightforward:
 	\begin{enumerate}
-		\item<2-> Fetch changes: this tells git to check if there's any changes on the server.
-		\item<2-> Pull changes: if there are changes, this tells git to download them
+		\item<2-> \textbf{Fetch} changes: this tells git to check if there's any changes on the server.
+		\item<2-> \textbf{Pull} changes: if there are changes, this tells git to download them
 	\end{enumerate}
-	\only<3>{I will now create a file called example.do which we will all edit later on. Take the above steps to download it.}
+	\only<3>{I will now create a file called example.do which we will all edit later on. Take the above steps to download it: you only need to press the sync button twice.}
 \end{frame}
 
 %------------------------------------------------
@@ -247,7 +248,6 @@ EDI \\ % Your institution for the title page
 		\item Commit the change (press "Commit to Master" in bottom left). GitHub Desktop may prefill a summary for you. 
 		  	These are always in present tense, as it describes what is done when the commit is applied.
 		\item Push the change to the central repository: Repository - Push
-		\item If you try to push at the same time, you may get an error, just try again later. 
 		\item If the repo has been changed before you try to push, you need to pull first:  Repository - Pull 
 	\end{enumerate}
 \end{frame}
@@ -255,7 +255,7 @@ EDI \\ % Your institution for the title page
 \begin{frame}
 	\frametitle{Notes:}
 	\begin{enumerate}
-		\item It all works fairly similar to Dropbox, but you have to do things manually. This may or may not be a good thing.
+		\item It all works fairly similar to Dropbox, but you have to do everything manually. This may or may not be a good thing.
 		\item To prevent having to pull other people's work everytime you want to push, you can make sure to work in your own branch (more on that later).
 		\item You can do all we've done from the command line, but it'd be more trouble than it's worth.
 	\end{enumerate}
@@ -295,8 +295,8 @@ There's a number of ways to undo things.
 	\frametitle{More}
 	\begin{itemize}
 		\item You can also just browse the history tab, find old text that you've deleted, and copy it back in.
-		\item There's many other ways of undoing things, here: \url{https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/}
 		\item There is a very detailed history of each file on the GitHub / Codebase website. This allows you to see who's made which edit etc.
+		\item There's many other ways of undoing things, here: \url{https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/}
 	\end{itemize}
 \end{frame}
 
@@ -310,28 +310,30 @@ Github shines in collaborating with other people and dealing with the eventual c
 
 \begin{frame}
 	\frametitle{Editing the same file}
-	Editing one file without conflicts:
+	Editing different lines in one file without conflicts:
 	\begin{enumerate}
-		\item<2-> In the file example.do, everyone add something to their own line, and commit your changes;
+		\item<2-> In the file example.do, everyone add something to their \textbf{own line}, and commit your changes;
 		\item<2-> Then we'll have to sync it all by pulling and then pushing;
 		\item<2-> At the end of all this, we'll have one file that everyone edited, simultaneously.
 	\end{enumerate}
-	A conflict does occur if you try to pull a commit that edits a line that you've already commited changes to in your own local repo. Let's try to create conflicts:
+	Editing the same line to create conflicts:
 	\begin{enumerate}
-		\item<3-> Now, two people your name to the line saying "Add your name here:", commit, and sync changes.
-		\item<3-> One person must now resolve the conflict. Open the file with the conflict, and make the edits necessary:
+		\item<3-> Now, two people your name after "Add your name here:";
+		\item<3-> Both commit, and one pushes their commit;
+		\item<4-> The other person must now pull the first's commit before pushing his;
+		\item<4-> The pulled commit will conflict with a local commit, and Git will allow you to address the conflict yourself by telling you where the conlfict is:
 	\end{enumerate}
 	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Resolving a conflict}
-	This is how git tags a conflict within the file:
-	\hfill\includegraphics[width=1\linewidth]{figures/conflict.png}\hfill\strut
+	\hfill\includegraphics[width=0.8\linewidth]{figures/conflict.png}\hfill\strut
 	Notes:
 	\begin{enumerate}
 		\item HEAD is us. To be precise, it's the most recent version of files that we have.
-		\item The long string of letters and numbers is the SHA of the commit that is conflicting with our work. Each commit has a unique SHA.
+		\item The long string of letters and numbers is the SHA (unique ID) of the commit that is conflicting with our work.
+		\item We can now just edit the file by picking and choosing what we want.
 	\end{enumerate}
 \end{frame}
 
@@ -343,20 +345,23 @@ Github shines in collaborating with other people and dealing with the eventual c
 		\item You can edit things in your branch, while leaving the main branch (\textbf{MASTER}) untouched;
 		\item Of course, this means that you are also not bothered by other people's changes!
 		\item Once you're happy with the changes you've made and feel they're ready to be shared, you can \textbf{merge} your branch back into master;
-		\item Merging works like pulling all changes in one go: meaning you'll have to resolve conflicts.
+		\item Merging works like pulling all changes in one go: meaning you'll have to resolve conflicts;
+		\item MASTER is always the main branch, and it's good to discuss with your colleagues before merging your changes into MASTER. GitHub and Codebase offer tools for this, but you can discuss however you want.
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Now you}
-	Now:
+	Now just play around. Try:
 	\begin{itemize}
-		\item Create a branch.
-		\item Make items to whatever you want
-		\item Commit these changes to your own branch.
-		\item Keep your branch synced with the remote as you wish.
-		\item At the end, merge your branch back into the MASTER branch.
+		\item Creating a branch.
+		\item Making changes to files in your own branch and commiting them;
+		\item Publishing and pulling your branch to the server;
+		\item Looking at other people's branches;
+		\item Merging other branches into yours;
+		\item Merging your branch back into the MASTER branch;
+		\item Browsing all files on the GitHub website.
 	\end{itemize}
 \end{frame}
 
@@ -367,7 +372,7 @@ Github shines in collaborating with other people and dealing with the eventual c
 \begin{frame}
 	\frametitle{Final thoughts}
 	\begin{itemize}
-		\item Today was complicated because we were all editing a bunch of files. Normally, you'd only edit a few files with a few people.
+		\item The main problem with Git is knowing where to start and what to google for. Hopefully you've now got a bit of a grasp of the terminology, so you can find help if needed;
 		\item Your collobarators (DPs) technically don't need to use git for it to be useful. Just make a branch where you keep their changes, and a branch where you keep yours and merge this from time to time, and share the results back to the collaborator.
 		\item Explore the github website to find all versions of all files. Note how much information there is to process, not quite user-friendly!
 	\end{itemize}
