@@ -79,6 +79,18 @@
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
+
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -92,7 +104,7 @@ EDI \\ % Your institution for the title page
 \medskip
 \textit{k.leuveld@surveybe.com} % Your email address
 }
-\date{\today} % Date, can be changed to a custom date
+\date{March 13, 2019} % Date, can be changed to a custom date
 
 \begin{document}
 
@@ -133,11 +145,19 @@ EDI \\ % Your institution for the title page
 		\item It handles conflicts really nicely (in plain text files, like CSV, .do and .ado);
 		\item It allows you to revert any change (any commit, in git-speak);
 		\item See who's responsible for each edit to a file;
-		\item It allows you to download any old version of any file. (Though the website or the command line);
+		\item It allows you to download any old version of any file (through the website or the command line);
 		\item It allows you to have multiple versions of the same files, so everyone can work on their own version: these versions (branches) can then be merged together.
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{What we'll do today}
+	\begin{itemize}
+		\item The main problem with learning git is the vast amount of terms and concepts there are;
+		\item Today we'll only look at the concepts you'll need to use it, none of the more advanced stuff;
+		\item You won't be a git wizard, but you'll know enough key terms to be able to google for help, and understand the help being offered.
+	\end{itemize}
+\end{frame}
 
 \begin{frame}
 \frametitle{Check that you've done the following}
@@ -160,7 +180,7 @@ EDI \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Overview}
 	\begin{itemize}
-		\item Your Git files are held in a \textbf{repository} (repo). There's two types of copies of this repository:
+		\item With git, your files are held in a \textbf{repository} (repo). There's two types of copies of this repository:
 		\begin{itemize}
 			\item The \textbf{remote} repository, or \textbf{origin}: this is a server somewhere. In our case today, it's GitHub. EDI adofiles and Surveybe code are hosted on Codebase.
 			\item Your (or your collaborator's) \textbf{local} repository: this is on your computer, and you make edits here.
@@ -182,21 +202,19 @@ EDI \\ % Your institution for the title page
 	\end{itemize}
 	\hfill\includegraphics[width=0.5\linewidth]{figures/clonerepo.png}\hfill\strut
 	\begin{itemize}
-			\item Then sync (the button may say pull, fetch, or push, depending on what is to be synced):
-	\end{itemize}
-	\hfill\includegraphics[width=0.5\linewidth]{figures/fetch.png}\hfill\strut
-	\begin{itemize}
 			\item You're ready to go!
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Git workflow; getting other people's edits}
-	The workflow to get other people's changes is straightforward:
+	The workflow to get other people's changes is straightforward, and uses the sync button on the top:
+	\hfill\includegraphics[width=0.5\linewidth]{figures/fetch.png}\hfill\strut
 	\begin{enumerate}
-		\item<2-> \textbf{Fetch} changes: this tells git to check if there's any changes on the server.
+		\item<2-> \textbf{Fetch} changes: this tells git to check if there's any changes on the server. Click it, and the button will change to...
 		\item<2-> \textbf{Pull} changes: if there are changes, this tells git to download them
 	\end{enumerate}
+
 	\only<3>{I will now create a file called example.do which we will all edit later on. Take the above steps to download it: you only need to press the sync button twice.}
 \end{frame}
 
@@ -287,14 +305,12 @@ There's a number of ways to undo things.
 		\item Reverting creates a new commit, which you can then revert as well!
 	\end{itemize}
 	\hfill\includegraphics[width=0.5\linewidth]{figures/revertcommit.png}\hfill\strut
-
-
 \end{frame}
 
 \begin{frame}
 	\frametitle{More}
 	\begin{itemize}
-		\item You can also just browse the history tab, find old text that you've deleted, and copy it back in.
+		\item You can also just browse the history tab, find old text that you've deleted, and copy it back into the current version of your file.
 		\item There is a very detailed history of each file on the GitHub / Codebase website. This allows you to see who's made which edit etc.
 		\item There's many other ways of undoing things, here: \url{https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/}
 	\end{itemize}
@@ -305,7 +321,7 @@ There's a number of ways to undo things.
 %------------------------------------------------
 \begin{frame}
 \frametitle{Dealing with other people}
-Github shines in collaborating with other people and dealing with the eventual conflicts. A big part of this is also making sure everyone works on their own version of the files: their own Branch.
+Git shines in collaborating with other people and dealing with the eventual conflicts. A big part of this is also making sure everyone works on their own version of the files: their own Branch.
 \end{frame}
 
 \begin{frame}
@@ -372,7 +388,6 @@ Github shines in collaborating with other people and dealing with the eventual c
 \begin{frame}
 	\frametitle{Final thoughts}
 	\begin{itemize}
-		\item The main problem with Git is knowing where to start and what to google for. Hopefully you've now got a bit of a grasp of the terminology, so you can find help if needed;
 		\item Your collobarators (DPs) technically don't need to use git for it to be useful. Just make a branch where you keep their changes, and a branch where you keep yours and merge this from time to time, and share the results back to the collaborator.
 		\item Explore the github website to find all versions of all files. Note how much information there is to process, not quite user-friendly!
 	\end{itemize}
