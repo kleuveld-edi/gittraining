@@ -2,7 +2,7 @@ Editing different lines without conflicts:
 
 Artee:
 
-Callum:
+Callum:안녕하세요
 
 Koen: koen
 
