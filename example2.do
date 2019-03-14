@@ -13,4 +13,4 @@ Marie: Bonjour tout le monde!!
 Sophie:
 
 Editing the same line to create conflicts:
-Add your name here: Marie call IMMEDIATELY YOUR SUPERVISORS! 
+Add your name here: MARIE CALL IMMEDIATELY YOUR SUPERVISORS! 
