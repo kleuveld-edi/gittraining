@@ -12,5 +12,6 @@ Marie: Bonjour tout le monde!!
 
 Sophie: #githubislife
 
-Editing the same line to create conflicts:
-Add your name here: MARIE CALL IMMEDIATELY YOUR SUPERVISORS! 
+Editing the same line to create conflicts: 
+Add your name here: MARIE CALL IMMEDIATELY YOUR SUPERVISORS!mayday mayday
+
