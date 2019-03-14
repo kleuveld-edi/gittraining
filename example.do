@@ -3,7 +3,7 @@ Artee:
 Callum:
 Koen:
 Luca:
-Marie:
+Marie: Bonjour tout le monde!!
 Sophie:
 
 Editing the same line to create conflicts:
