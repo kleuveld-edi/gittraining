@@ -4,7 +4,7 @@ Callum:
 Koen:
 Luca:
 Marie:
-Sophie:
+Sophie: logit var1 var 2
 
 Editing the same line to create conflicts:
 Add your name here:
