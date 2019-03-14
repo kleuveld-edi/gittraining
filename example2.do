@@ -2,11 +2,11 @@ Editing different lines without conflicts:
 
 Artee:
 
-Callum:
+Callum:안녕하세요
 
-Koen:
+Koen: koen
 
-Luca:
+Luca: Buongiorno a tutti
 
 Marie: Bonjour tout le monde!!
 
