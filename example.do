@@ -1,7 +1,7 @@
 Editing different lines without conflicts:
 Artee:
 Callum:
-Koen: hoi!
+Koen:
 Luca:
 Marie:
 Sophie:
