@@ -1,4 +1,4 @@
-Editing different lines without conflicts:
+﻿Editing different lines without conflicts:
 
 Artee:
 

@@ -1,12 +1,12 @@
-Editing different lines without conflicts:
+﻿Editing different lines without conflicts:
 
-Artee: hello
+Artee: bla
 
-Callum:
+Callum:안녕하세요
 
-Koen:
+Koen: koen
 
-Luca:
+Luca: Buongiorno a tutti
 
 Marie: Bonjour tout le monde!!
 
