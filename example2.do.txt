@@ -1,6 +1,6 @@
 ﻿Editing different lines without conflicts:
 
-Artee:
+Artee: bla
 
 Callum:안녕하세요
 
@@ -10,9 +10,7 @@ Luca: Buongiorno a tutti
 
 Marie: Bonjour tout le monde!!
 
-Sophie: #githubislife
+Sophie:
 
 Editing the same line to create conflicts:
-Add your name here: Marie Koen Callum Marie call IMMEDIATELY YOUR SUPERVISORS! 
-
-
+Add your name here:
