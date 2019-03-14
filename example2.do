@@ -6,7 +6,7 @@ Callum:
 
 Koen:
 
-Luca:
+Luca: Buongiorno a tutti
 
 Marie: Bonjour tout le monde!!
 
