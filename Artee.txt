@@ -1,1 +1,7 @@
 hello help im stuck
+
+saving:
+commit, pull & push
+
+laoding:
+fetch -> pull
