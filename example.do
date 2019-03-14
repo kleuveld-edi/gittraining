@@ -2,7 +2,7 @@ Editing different lines without conflicts:
 Artee:
 Callum:
 Koen:
-Luca:
+Luca: buongiorno
 Marie:
 Sophie:
 
