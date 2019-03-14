@@ -10,7 +10,7 @@ Luca: Buongiorno a tutti
 
 Marie: Bonjour tout le monde!!
 
-Sophie:
+Sophie: #githubislife
 
 Editing the same line to create conflicts:
-Add your name here:
+Add your name here: MARIE CALL IMMEDIATELY YOUR SUPERVISORS! 
